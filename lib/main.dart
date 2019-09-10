@@ -1,12 +1,15 @@
 import 'dart:ui' as ui;
 
 import 'package:flame/flame.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_trex/game/Game.dart';
 
 void main() async {
+  debugDefaultTargetPlatformOverride = TargetPlatform.fuchsia;
+
   await Flame.util.fullScreen();
   await Flame.util.setOrientation(DeviceOrientation.landscapeLeft);
 
